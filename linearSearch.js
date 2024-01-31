@@ -14,15 +14,13 @@ function linearSearch(searchTerm, arr) {
 
 function globalLinearSearch(searchTerm, arr) {
   let answer = [] 
-  let stringArr = arr.join('')
-  let lowerCase = stringArr.toLowerCase()
-  let lowerArr = lowerCase.split('')
-  if(!lowerArr.includes(searchTerm)){
+  let lowerCaseArr = arr.join('').toLowerCase().split('')
+  if(!lowerCaseArr.includes(searchTerm)){
     return undefined
   }
   else{
-  for(let i = 0; i < lowerArr.length; i++){
-    if(lowerArr[i] === searchTerm){
+  for(let i = 0; i < lowerCaseArr.length; i++){
+    if(lowerCaseArr[i] === searchTerm){
       answer.push(i)
     }
   }  
