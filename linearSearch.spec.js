@@ -13,6 +13,10 @@ describe("tests linearSearch", () => {
     expect(linearSearch(4, [1, 2, 3])).toBe(undefined);
   });
 });
+  test("linearSearch(8, [88, 8, 3]) === 1", () => {
+    expect(linearSearch(8, [88, 8, 3])).toBe(1);
+  });
+
 
 describe("tests globalLinearSearch", () => {
   test("globalLinearSearch('a', 'bananas'.split('')) === [1, 3, 5]", () => {
@@ -23,7 +27,13 @@ describe("tests globalLinearSearch", () => {
     expect(globalLinearSearch("s", "bananas".split(""))).toEqual([6]);
   });
 
+  test("globalLinearSearch('s', 'bananaS'.split('')) === [6]", () => {
+    expect(globalLinearSearch("s", "bananaS".split(""))).toEqual([6]);
+  });
+
   test("globalLinearSearch('n', 'bananas'.split('')) === [2, 4]", () => {
     expect(globalLinearSearch("n", "bananas".split(""))).toEqual([2, 4]);
   });
 });
+
+  
